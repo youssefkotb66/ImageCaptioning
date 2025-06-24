@@ -1,0 +1,9 @@
+tensorflow==2.15.0
+keras==2.15.0
+matplotlib
+numpy
+scikit-learn
+pillow
+nltk
+gdown
+requests
