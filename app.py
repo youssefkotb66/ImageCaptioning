@@ -24,11 +24,10 @@ import gradio as gr
 #         return jsonify({'error': str(e)}), 500
 
 def caption_image_gradio(img):
-    return greedy_algorithm(img, vectorization, caption_model, preprocess=True)
+    return greedy_algorithm(img, vectorization, caption_model, False)
 # if __name__ == '__main__':
 #     app.run(debug=True)
 gr.Interface(fn=caption_image_gradio, 
              inputs=gr.Image(type="pil"), 
-             outputs="text").launch()
+             outputs="text").launch(share=True)
 
-gr.launch()
